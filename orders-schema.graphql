@@ -4,6 +4,8 @@ extend schema
       "@key",
       "@tag",
       "@shareable"
+      "@authenticated"
+      "@link"
     ]
   )
 
@@ -11,7 +13,7 @@ type Query {
   """
   Get a specific order by id. Meant to be used for a detailed view of an order
   """
-  order(id: ID!): Order 
+  order(id: ID!): Order @authenticated
 }
 
 """
